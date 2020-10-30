@@ -1,0 +1,5 @@
+qa: 
+  url: 'https://viacep.com.br/ws/'
+
+prod: 
+  url: 'https://viacep.com.br/ws/'

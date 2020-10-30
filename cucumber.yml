@@ -1,0 +1,12 @@
+## YAML Templatesss
+---
+default: -p pretty -p hmg -p html -p json --publish-quiet
+
+pretty: --format pretty
+progress:  --format progress
+
+hmg:  URL_S=hmg
+dev:  URL_S=dev
+
+html:  --format html --out=results/report.html
+json:  --format json --out=results/report.json
