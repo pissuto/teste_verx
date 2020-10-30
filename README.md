@@ -1,49 +1,17 @@
-## Getting Started ##
-
-
-
-### Installing gems ###
-To install gems type:
-```shell
-bundle install
-```
-
-### Drivers: ###
-Install and include in PATH
-- [chromedriver](https://sites.google.com/a/chromium.org/chromedriver/)
-- [phantomjs](http://phantomjs.org/)
-- [internetExplorerDriver](http://www.seleniumhq.org/download/)
-- [Firefox Geckodriver](https://developer.mozilla.org/en-US/docs/Mozilla/QA/Marionette/WebDriver)
-
-Install [Webdriver Safari extension](http://selenium-release.storage.googleapis.com/2.48/SafariDriver.safariextz).
-
-
-### Run tests in DEV with Chrome###
-Type this in the tests folder:
-```shell
-bundle exec cucumber  -p ci -p html -p headless -p dev
-```
-
-### Run tests in DEV with headless###
-Type this in the tests folder:
-```shell
-bundle exec cucumber  -p ci -p html -p headless -p dev
-```
-
-### Run tests in HMG with Chrome###
-Type this in the tests folder:
-```shell
-bundle exec cucumber -p pretty -p html -p no_headless -p hmg
-```
-
-### Run tests in HMG with headless###
-Type this in the tests folder:
-```shell
-bundle exec cucumber -p ci -p html -p headless -p hmg
-```
-
-### Run with tags###
-Type this in the tests folder:
-```shell
-bundle exec cucumber --tags @run
-```
+# Software e Configuração:
+- Neste projeto estou fazendo automação de testes web usando [Ruby](https://www.ruby-lang.org/pt/) como linguagem de programação, [RSpec](https://rspec.info/) ações e validações, [Cucumber](https://cucumber.io/) para interpretação de Scenarios, Steps e construção da estrutura.
+  - Não estou especificando versões para minhas Gems
+  - Minhas declaraçoes de dependencias estão no arquivo Gemfile
+  - Tudo o que será executado nesse projeto está sendo declarado no cucumber.yml
+# Sobre a Automação
+  1 - Criar uma funcionalidade para consultar os dados de um endereço a partir de um CEP.
+  2 - Cenários:
+    2.1 - Criar um cenário de sucesso na consulta, printando o código do IBGE do endereço no    stdout.
+    2.2 - Criar um cenário passando um CEP inválido
+## Options
+* `AMB` - Em qual ambiente o teste deve ser executado
+    * `qa` <- default
+    * `prod`
+## Comando para executar testes exemplos:
+  - cucumber -t @cep_valido AMB=qa
+  - cucumber -t @cep_invalido AMB=qa
